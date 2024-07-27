@@ -5,11 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             background-color: lightblue;
             font-family: Arial, sans-serif;
             margin: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .header .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .contact-info span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .contact-info i {
+            margin-right: 8px;
         }
 
         .navbar {
@@ -39,6 +64,13 @@
 </head>
 
 <body>
+    <div class="header">
+        <div class="contact-info">
+            <span><i class="fa fa-phone"></i>Call : +254706302881</span>
+            <span><i class="fa fa-envelope"></i>Email : elvisodhiambo255@gmail.com</span>
+        </div>
+    </div>
+
     <div class="navbar">
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
@@ -48,7 +80,7 @@
 
     <div class="content">
         <h1>Welcome to My Portfolio</h1>
-        <p>This is a simple HTML page with a navigation menu and a  background.</p>
+        <p>This is a simple HTML page with a navigation menu and a light blue background.</p>
     </div>
 </body>
 
