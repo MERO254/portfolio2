@@ -7,14 +7,14 @@
     <title>Simple Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
+/*         body {
             background-color: lightblue;
             font-family: Arial, sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
+        } */
 
         .header {
             display: flex;
@@ -127,6 +127,92 @@
             text-align: center;
             padding: 10px 0;
         }
+        body {
+      font-family: 'Roboto', sans-serif;
+      margin: 20px;
+      color: #333;
+      background-color: #f4f4f9;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .description {
+      max-width: 70%;
+      margin: 20px 0;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      color: #555;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      max-width: 300px;
+      padding: 16px;
+      text-align: center;
+      margin: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+    .carousel-wrapper {
+      width: 80%;
+      margin: 40px auto;
+      position: relative;
+    }
+    .owl-nav button.owl-prev, .owl-nav button.owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    .owl-nav button.owl-prev {
+      left: -50px;
+    }
+    .owl-nav button.owl-next {
+      right: -50px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
     </style>
 </head>
 
@@ -145,21 +231,21 @@
         <a href="#contact">Contact Me</a>
     </div>
 
-    <div class="section">
-        <div class="text">
-            <p>Hi I Am Elvis Odhiambo</p>
-            <h1>
-                I Am <br>
-                a Mobile App<br>
-                Developer<br>
-            </h1>
-            <a href="projects.html" class="button">View Projects</a>
-        </div>
-        <div class="image">
-            <img src="avg12.png" alt="Placeholder Image">
-        </div>
+    <div class="container">
+    <div class="description">
+      <img src="{% static 'images/Urology1.png' %}" alt="Doctor Image"/>
+      <h1>Telemedical App</h1>
+      <p>I participated in a hackathon where our team developed a telemedical app and website named Theracare. Theracare facilitates chat consultations with healthcare providers, offering easy access to medical advice and diagnoses by allowing users to book appointments based on doctor availability. The main goal of this project was to enable patients to consult doctors not only within their country but also internationally, enhancing the management of chronic diseases such as COVID-19 by allowing patients and doctors to communicate virtually.</p>
+      <h2>Role Played</h2>
+      <p>I acted as the Mobile App Developer and Team Leader, overseeing the development and integration of various features.</p>
+      <h2>Features</h2>
+      <p>The application features a user-friendly login and registration page, allowing users to easily sign up and log in with their email addresses. Once logged in, users are greeted with a home page that lists doctors specializing in various fields such as surgery and internal medicine.</p>
+      <p>Users can book appointments with doctors based on their availability. If a doctor is available, the user can proceed to the next page to schedule an appointment by selecting the desired time and date. Once booked, the appointment appears on the user's appointment page, where they can chat with the doctor at the scheduled time. During the chat, doctors can provide prescriptions if necessary.</p>
+      <p>Additionally, the app includes AUTODOC, a Gemini AI assistant integrated to serve as an assistant doctor, providing users with automated medical advice. Users also have access to a profile page where they can edit their personal information and update their medical history. The application also has an alternative app for the doctors where they can register, log in, update their profile (e.g., updating availability), view appointments, and chat with patients.</p>
     </div>
+  </div>
 
+    
     <footer>
         &copy; 2024 Elvis Odhiambo. All rights reserved.
     </footer>
