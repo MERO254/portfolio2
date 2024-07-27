@@ -60,14 +60,36 @@
             padding: 20px;
             text-align: center;
         }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: yellow;
+        }
+
+        .section .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .section .image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .section .image img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
         <div class="contact-info">
-            <span><i class="fa fa-phone"></i>Call : +254706302881</span>
-            <span><i class="fa fa-envelope"></i>Email : elvisodhiambo255@gmail.com</span>
+            <span><i class="fa fa-phone"></i> Call : +254706302881</span>
+            <span><i class="fa fa-envelope"></i> Email : elvisodhiambo255@gmail.com</span>
         </div>
     </div>
 
@@ -78,8 +100,18 @@
         <a href="#contact">Contact Me</a>
     </div>
 
+    <div class="section">
+        <div class="text">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is a simple HTML page with a navigation menu, a black header, and yellow section below it.</p>
+        </div>
+        <div class="image">
+            <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        </div>
+    </div>
+
     <div class="content">
-        <h1>Welcome to My Portfolio</h1>
+        <h1>More About Me</h1>
         <p>This is a simple HTML page with a navigation menu and a light blue background.</p>
     </div>
 </body>
