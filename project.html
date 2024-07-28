@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha384-pzjw8f+ua7Kw1TIq5mOXm0J6Ef6QdPT6AUR7LYZ6ZZDP8G7TExz3czq6STzWjwjP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha384-tD7iY8b+QzYFzQELdCvjzpC8bbef5bm5hxPH9P/BPRxK1zz1FfMJcwdeHwtp+fiS" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+GY5C1Clq2e1z4n+5QAY5ojLFN5c5y8jKl8ETEX" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha384-ktWvOUa05G3qfaBXhbY/gCVugVZ39UOZK0Ph5+J+hK5xCPt1gdx4uB3cY0SnPbXk" crossorigin="anonymous"></script>
+
     <style>
-/*         body {
-            background-color: lightblue;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        } */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            color: #333;
+            background-color: #f4f4f9;
+        }
 
         .header {
             display: flex;
@@ -127,92 +130,125 @@
             text-align: center;
             padding: 10px 0;
         }
-        body {
-      font-family: 'Roboto', sans-serif;
-      margin: 20px;
-      color: #333;
-      background-color: #f4f4f9;
-    }
-    .container {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
-    .description {
-      max-width: 70%;
-      margin: 20px 0;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    h1, h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 3rem;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      color: #555;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      max-width: 300px;
-      padding: 16px;
-      text-align: center;
-      margin: 15px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 10px;
-    }
-    .carousel-wrapper {
-      width: 80%;
-      margin: 40px auto;
-      position: relative;
-    }
-    .owl-nav button.owl-prev, .owl-nav button.owl-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #fff;
-      border: none;
-      border-radius: 50%;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem;
-    }
-    .owl-nav button.owl-prev {
-      left: -50px;
-    }
-    .owl-nav button.owl-next {
-      right: -50px;
-    }
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
+
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .description {
+            max-width: 70%;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 300px;
+            padding: 16px;
+            text-align: center;
+            margin: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .carousel-wrapper {
+            width: 80%;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .owl-nav button.owl-prev, .owl-nav button.owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+
+        .owl-nav button.owl-prev {
+            left: -50px;
+        }
+
+        .owl-nav button.owl-next {
+            right: -50px;
+        }
+
+        .reference {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .reference a {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .btn-primary {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: darkblue;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .my-4 {
+            margin: 1.5rem 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -232,79 +268,98 @@
     </div>
 
     <div class="container">
-    <div class="description">
-      <img src="{% static 'images/Urology1.png' %}" alt="Doctor Image"/>
-      <h1>Telemedical App</h1>
-      <p>I participated in a hackathon where our team developed a telemedical app and website named Theracare. Theracare facilitates chat consultations with healthcare providers, offering easy access to medical advice and diagnoses by allowing users to book appointments based on doctor availability. The main goal of this project was to enable patients to consult doctors not only within their country but also internationally, enhancing the management of chronic diseases such as COVID-19 by allowing patients and doctors to communicate virtually.</p>
-      <h2>Role Played</h2>
-      <p>I acted as the Mobile App Developer and Team Leader, overseeing the development and integration of various features.</p>
-      <h2>Features</h2>
-      <p>The application features a user-friendly login and registration page, allowing users to easily sign up and log in with their email addresses. Once logged in, users are greeted with a home page that lists doctors specializing in various fields such as surgery and internal medicine.</p>
-      <p>Users can book appointments with doctors based on their availability. If a doctor is available, the user can proceed to the next page to schedule an appointment by selecting the desired time and date. Once booked, the appointment appears on the user's appointment page, where they can chat with the doctor at the scheduled time. During the chat, doctors can provide prescriptions if necessary.</p>
-      <p>Additionally, the app includes AUTODOC, a Gemini AI assistant integrated to serve as an assistant doctor, providing users with automated medical advice. Users also have access to a profile page where they can edit their personal information and update their medical history. The application also has an alternative app for the doctors where they can register, log in, update their profile (e.g., updating availability), view appointments, and chat with patients.</p>
+        <div class="description">
+            <img src="{% static 'images/Urology1.png' %}" alt="Doctor Image"/>
+            <h1>Telemedical App</h1>
+            <p>I participated in a hackathon where our team developed a telemedical app and website named Theracare. Theracare facilitates chat consultations with healthcare providers, offering easy access to medical advice and diagnoses by allowing users to book appointments based on doctor availability. The main goal of this project was to enable patients to consult doctors not only within their country but also internationally, enhancing the management of chronic diseases such as COVID-19 by allowing patients and doctors to communicate virtually.</p>
+            <h2>Role Played</h2>
+            <p>I acted as the Mobile App Developer and Team Leader, overseeing the development and integration of various features.</p>
+            <h2>Features</h2>
+            <p>The application features a user-friendly login and registration page, allowing users to easily sign up and log in with their email addresses. Once logged in, users are greeted with a home page that lists doctors specializing in various fields such as surgery and internal medicine.</p>
+            <p>Users can book appointments with doctors based on their availability. If a doctor is available, the user can proceed to the next page to schedule an appointment by selecting the desired time and date. Once booked, the appointment appears on the user's appointment page, where they can chat with the doctor at the scheduled time. During the chat, doctors can provide prescriptions if necessary.</p>
+            <p>Additionally, the app includes AUTODOC, a Gemini AI assistant integrated to serve as an assistant doctor, providing users with automated medical advice. Users also have access to a profile page where they can edit their personal information and update their medical history. The application also has an alternative app for the doctors where they can register, log in, update their profile (e.g., updating availability), view appointments, and chat with patients.</p>
+        </div>
     </div>
-  </div>
 
-  <div class="carousel-wrapper">
-    <div class="owl-carousel owl-theme">
-      <div class="item card">
-        <img src="{% static 'images/login and registration.png' %}" alt="Login and Registration">
-        <p>Login and Registration Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/doctor.png' %}" alt="Doctors Page">
-        <p>Doctors Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/doctor3.png' %}" alt="Booking Appointments">
-        <p>Booking Appointments Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/appointmentspage.png' %}" alt="Appointments Page">
-        <p>Appointments Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/chatpage.png' %}" alt="Chatting Page">
-        <p>Chatting Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/aidocpage.png' %}" alt="Chatting with AIDOC">
-        <p>Chatting with AIDOC</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/resultforai.png' %}" alt="Results from AIDOC">
-        <p>Results from AIDOC</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/userprofile.png' %}" alt="User Profile Page">
-        <p>User Profile Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/doctors profilepage.png' %}" alt="Doctor Profile Page">
-        <p>Doctor Profile Page</p>
-      </div>
-      <div class="item card">
-        <img src="{% static 'images/doctorupdateprofile.png' %}" alt="Doctor Profile Page">
-        <p>Doctor update profile</p>
-      </div>  
+    <div class="carousel-wrapper">
+        <div class="owl-carousel owl-theme">
+            <div class="item card">
+                <img src="{% static 'images/login and registration.png' %}" alt="Login and Registration">
+                <p>Login and Registration Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/doctor.png' %}" alt="Doctors Page">
+                <p>Doctors Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/doctor3.png' %}" alt="Booking Appointments">
+                <p>Booking Appointments Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/appointmentspage.png' %}" alt="Appointments Page">
+                <p>Appointments Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/chatpage.png' %}" alt="Chatting Page">
+                <p>Chatting Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/aidocpage.png' %}" alt="Chatting with AIDOC">
+                <p>Chatting with AIDOC</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/resultforai.png' %}" alt="Results from AIDOC">
+                <p>Results from AIDOC</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/userprofile.png' %}" alt="User Profile Page">
+                <p>User Profile Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/doctors profilepage.png' %}" alt="Doctor Profile Page">
+                <p>Doctor Profile Page</p>
+            </div>
+            <div class="item card">
+                <img src="{% static 'images/doctorupdateprofile.png' %}" alt="Doctor Profile Page">
+                <p>Doctor update profile</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="reference">
-    <h2>Reference:</h2>
-    <a href="https://github.com/MERO254/tele">https://github.com/MERO254/tele</a>
-  </div>
+    <div class="reference">
+        <h2>Reference:</h2>
+        <a href="https://github.com/MERO254/tele">https://github.com/MERO254/tele</a>
+    </div>
 
-  <!-- Add Other Projects Button -->
-  <div class="container text-center my-4">
+    <div class="container text-center my-4">
         <iframe width="640" height="360" src="https://www.youtube.com/embed/6scKUk5FJAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <button class="btn btn-primary" onclick="window.location.href='{% url 'otherproject' %}'" style="margin-top: 10px">Other Projects</button>
-  </div>  
+        <button class="btn-primary" onclick="window.location.href='{% url 'otherproject' %}'" style="margin-top: 10px">Other Projects</button>
+    </div>
 
-    
     <footer>
         &copy; 2024 Elvis Odhiambo. All rights reserved.
     </footer>
 </body>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            navText: ["<button class='owl-prev'>&lt;</button>","<button class='owl-next'>&gt;</button>"],
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        });
+    });
+</script>
 
 </html>
