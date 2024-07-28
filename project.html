@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha384-ktWvOUa05G3qfaBXhbY/gCVugVZ39UOZK0Ph5+J+hK5xCPt1gdx4uB3cY0SnPbXk" crossorigin="anonymous"></script>
 
     <style>
+        /* Include your styles here */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 20px;
@@ -269,7 +270,7 @@
 
     <div class="container">
         <div class="description">
-            <img src="{% static 'images/Urology1.png' %}" alt="Doctor Image"/>
+            <img src="assets/images/Urology1.png" alt="Doctor Image"/>
             <h1>Telemedical App</h1>
             <p>I participated in a hackathon where our team developed a telemedical app and website named Theracare. Theracare facilitates chat consultations with healthcare providers, offering easy access to medical advice and diagnoses by allowing users to book appointments based on doctor availability. The main goal of this project was to enable patients to consult doctors not only within their country but also internationally, enhancing the management of chronic diseases such as COVID-19 by allowing patients and doctors to communicate virtually.</p>
             <h2>Role Played</h2>
@@ -284,43 +285,43 @@
     <div class="carousel-wrapper">
         <div class="owl-carousel owl-theme">
             <div class="item card">
-                <img src="{% static 'images/login and registration.png' %}" alt="Login and Registration">
+                <img src="assets/images/login and registration.png" alt="Login and Registration">
                 <p>Login and Registration Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/doctor.png' %}" alt="Doctors Page">
+                <img src="assets/images/doctor.png" alt="Doctors Page">
                 <p>Doctors Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/doctor3.png' %}" alt="Booking Appointments">
+                <img src="assets/images/doctor3.png" alt="Booking Appointments">
                 <p>Booking Appointments Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/appointmentspage.png' %}" alt="Appointments Page">
+                <img src="assets/images/appointmentspage.png" alt="Appointments Page">
                 <p>Appointments Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/chatpage.png' %}" alt="Chatting Page">
+                <img src="assets/images/chatpage.png" alt="Chatting Page">
                 <p>Chatting Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/aidocpage.png' %}" alt="Chatting with AIDOC">
+                <img src="assets/images/aidocpage.png" alt="Chatting with AIDOC">
                 <p>Chatting with AIDOC</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/resultforai.png' %}" alt="Results from AIDOC">
+                <img src="assets/images/resultforai.png" alt="Results from AIDOC">
                 <p>Results from AIDOC</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/userprofile.png' %}" alt="User Profile Page">
+                <img src="assets/images/userprofile.png" alt="User Profile Page">
                 <p>User Profile Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/doctors profilepage.png' %}" alt="Doctor Profile Page">
+                <img src="assets/images/doctors profilepage.png" alt="Doctor Profile Page">
                 <p>Doctor Profile Page</p>
             </div>
             <div class="item card">
-                <img src="{% static 'images/doctorupdateprofile.png' %}" alt="Doctor Profile Page">
+                <img src="assets/images/doctorupdateprofile.png" alt="Doctor Profile Page">
                 <p>Doctor update profile</p>
             </div>
         </div>
@@ -333,13 +334,14 @@
 
     <div class="container text-center my-4">
         <iframe width="640" height="360" src="https://www.youtube.com/embed/6scKUk5FJAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <button class="btn-primary" onclick="window.location.href='{% url 'otherproject' %}'" style="margin-top: 10px">Other Projects</button>
+        <button class="btn-primary" onclick="window.location.href='otherproject.html'" style="margin-top: 10px">Other Projects</button>
     </div>
 
     <footer>
         &copy; 2024 Elvis Odhiambo. All rights reserved.
     </footer>
 </body>
+
 <script>
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
