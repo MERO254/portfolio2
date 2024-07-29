@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="icon" href="avg12.png" type="image/png">
-
-
+    <link rel="icon" href="avg12.png" type="image/png">
     <style>
-        /* Include your styles here */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 20px;
@@ -25,10 +22,12 @@
             background-color: black;
             padding: 10px 20px;
             color: white;
+            flex-wrap: wrap;
         }
 
         .header .contact-info {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             width: 100%;
         }
@@ -36,14 +35,7 @@
         .header .contact-info span {
             display: flex;
             align-items: center;
-        }
-
-        .header .contact-info span:first-child {
-            justify-content: flex-start;
-        }
-
-        .header .contact-info span:last-child {
-            justify-content: flex-end;
+            margin: 5px 0;
         }
 
         .header .contact-info i {
@@ -55,7 +47,8 @@
             justify-content: center;
             background-color: #333;
             padding: 10px 0;
-            width:100%;
+            width: 100%;
+            flex-wrap: wrap;
         }
 
         .navbar a {
@@ -81,6 +74,7 @@
             padding: 40px 20px;
             background-color: lightblue;
             flex-grow: 1;
+            flex-wrap: wrap;
         }
 
         .section .text {
@@ -227,6 +221,42 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar a {
+                padding: 10px;
+                width: 100%;
+                text-align: left;
+            }
+
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section .text {
+                text-align: center;
+            }
+
+            .section .image {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
