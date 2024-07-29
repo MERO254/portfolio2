@@ -48,6 +48,7 @@
             justify-content: center;
             background-color: #333;
             padding: 10px 0;
+            position: relative;
         }
 
         .navbar a {
@@ -65,6 +66,10 @@
 
         .navbar a.active {
             color: lightblue;
+        }
+
+        .navbar .icon {
+            display: none;
         }
 
         .section {
@@ -134,6 +139,36 @@
                 text-align: center;
             }
 
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar a {
+                display: none;
+                width: 100%;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .navbar a.icon {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 10px;
+            }
+
+            .navbar.responsive {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .navbar.responsive a {
+                display: block;
+            }
+
             .section {
                 flex-direction: column;
                 align-items: center;
@@ -158,10 +193,13 @@
         </div>
     </div>
 
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <a href="#home" class="active">Home</a>
         <a href="project.html">Projects</a>
         <a href="about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 
     <div class="section">
@@ -182,6 +220,17 @@
     <footer>
         &copy; 2024 Elvis Odhiambo. All rights reserved.
     </footer>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+            } else {
+                navbar.className = "navbar";
+            }
+        }
+    </script>
 </body>
 
 </html>
