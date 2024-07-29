@@ -19,7 +19,7 @@
 
         .header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             background-color: black;
             padding: 10px 20px;
@@ -30,19 +30,13 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            flex-wrap: wrap;
         }
 
         .header .contact-info span {
             display: flex;
             align-items: center;
-        }
-
-        .header .contact-info span:first-child {
-            justify-content: flex-start;
-        }
-
-        .header .contact-info span:last-child {
-            justify-content: flex-end;
+            margin: 5px 0;
         }
 
         .header .contact-info i {
@@ -130,6 +124,16 @@
         }
 
         @media (max-width: 768px) {
+            .header {
+                padding: 10px;
+            }
+
+            .header .contact-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
             .section {
                 flex-direction: column;
                 align-items: center;
